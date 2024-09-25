@@ -1,20 +1,24 @@
-import { useState } from 'react';
+// import { useReducer, useState } from 'react';
+// import { v4 as uuidv4 } from 'uuid'; 
+// import { type } from '@testing-library/user-event/dist/type';
+// import { TodoContext } from './context/TodoContext'; 
+// import { TodoDispatchContext } from './context/TodoContext';
+// TodoContext :  todos의 상태를 관리
+// todoDispatchContext : dispatch의 상태를 관리
 import './App.css';
 import TodoList from './components/todo/TodoList';
+import AddTodo from './components/todo/AddTodo';
+import { TodoProvider } from './context/TodoContext';
 
-function AppTodo(props) {
-    
-    const [todos, setTodos] = useState([
-        { id: 0, label: 'HTML,CSS 공부하기' },
-        { id: 1, label: 'JAVASCRIPT 공부하기' },
-        { id: 2, label: '포트폴리오 만들기' }
-    ])
+function AppTodo() {
+
     return (
-        <div>
+        <TodoProvider>
             <h2>할일목록</h2>
-            <TodoList todos={todos} />
-        </div>
-    );
+            <AddTodo />
+            <TodoList />
+        </TodoProvider>
+    )
 }
 
 export default AppTodo;

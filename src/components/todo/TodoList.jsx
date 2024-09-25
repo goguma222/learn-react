@@ -1,11 +1,17 @@
-export default function TodoList({ todos = [] }) {
+import TodoItem from "./TodoItem";
+import { useTodos } from "../../context/TodoContext";
 
-    const items = [...todos];
-    // items.push({ id: 2, label: '포트폴리오 사이트 만들기' });
-    
+export default function TodoList() {
+
+    const todos = useTodos();
+
     return (
         <ul>
-            {items.map(item => <li key={item.id}>{item.label}</li>)}
+            {todos.map(item => 
+                <li key={item.id}>
+                    <TodoItem item={item}/>
+                </li>
+            )}
         </ul>
     );
 }

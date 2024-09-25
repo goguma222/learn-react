@@ -16,7 +16,7 @@ function LinkIconBtn({ link }) {
   )
 }
 
-export default function CourseItem({ title, description, thumbnail, isFavorite, link }) {
+export default function CourseItem({ onFavorite, id, title, description, thumbnail, isFavorite, link }) {
   
   // const isEmpty = false;
 
@@ -28,7 +28,8 @@ export default function CourseItem({ title, description, thumbnail, isFavorite, 
 
   function handleFavorite(e) {
     e.stopPropagation();
-    alert(isFavorite ? '좋아요' : '모르겠어요');
+    // alert(isFavorite ? '좋아요' : '모르겠어요');
+    onFavorite(id, !isFavorite);
   }
 
   function handleItemClick() {
