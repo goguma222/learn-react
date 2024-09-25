@@ -5,7 +5,7 @@
 // import { TodoDispatchContext } from './context/TodoContext';
 // TodoContext :  todos의 상태를 관리
 // todoDispatchContext : dispatch의 상태를 관리
-import './App.css';
+// import './App.css';
 import TodoList from './components/todo/TodoList';
 import AddTodo from './components/todo/AddTodo';
 import { TodoProvider } from './context/TodoContext';
