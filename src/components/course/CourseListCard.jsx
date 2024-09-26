@@ -1,9 +1,8 @@
-import { Fragment } from "react";
-import CourseItem from "./CourseItem";
-import Card from "../Card";
+import { Fragment } from 'react';
+import CourseItem from './CourseItem';
+import Card from '../Card';
 
 export default function CourseListCard({ onFavorite, title, items }) {
-
   const lastIndex = items.length - 1;
 
   return (

@@ -5,14 +5,13 @@ import FooterTheme from './theme/Footer.jsx';
 import { DarkModeProvider } from './context/DarkModeContext.jsx';
 
 export default function AppTheme(props) {
-
   return (
     <>
-        <DarkModeProvider initDarkMode={false}>
-            <HeaderTheme />
-            <MainTheme />
-            <FooterTheme />
-        </DarkModeProvider>
+      <DarkModeProvider initDarkMode={false}>
+        <HeaderTheme />
+        <MainTheme />
+        <FooterTheme />
+      </DarkModeProvider>
     </>
   );
 }

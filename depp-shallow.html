@@ -1,31 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        // 1] Shallow Copy (얕은 복사)
-        // let person1 = { firstName: '짐', lastName: '코딩' };
-        // let person2 = person1;
-        // console.log('person', person2)
+      // 1] Shallow Copy (얕은 복사)
+      // let person1 = { firstName: '짐', lastName: '코딩' };
+      // let person2 = person1;
+      // console.log('person', person2)
 
-        // 2] Deep Copy (깊은 복사)
-        let person1 = { 
-            firstName: '짐',
-            lastName: '코딩',
-            children: {
-                fullName: '짐코딩'
-            }
-        };
-        let person2 = {...person1}
-        // person1.firstName = 'GYM';
-        person1.children.fullName = '이장희'
-        console.log('person1', person1) // firstName: GYM, lastName: 코딩
-        console.log('person2', person2) // firstName: 짐, lastName: 코딩
+      // 2] Deep Copy (깊은 복사)
+      let person1 = {
+        firstName: '짐',
+        lastName: '코딩',
+        children: {
+          fullName: '짐코딩',
+        },
+      };
+      let person2 = { ...person1 };
+      // person1.firstName = 'GYM';
+      person1.children.fullName = '이장희';
+      console.log('person1', person1); // firstName: GYM, lastName: 코딩
+      console.log('person2', person2); // firstName: 짐, lastName: 코딩
     </script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>

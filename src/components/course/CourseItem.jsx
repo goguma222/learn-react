@@ -1,11 +1,18 @@
-function HeartIconBtn ({ onHeartClick, isFavorite = false }) {
-
+function HeartIconBtn({ onHeartClick, isFavorite = false }) {
   return (
-    <button className="btn" onClick={(e) => onHeartClick(e)}>
+    <button className="btn" onClick={e => onHeartClick(e)}>
       {/* 방법2 코드 간결하고 좋음 */}
-      <img className="btn__img" src={isFavorite ? '/public/img/heart-fill-icon.svg' : '/public/img/heart-icon.svg'} alt="하트" />
+      <img
+        className="btn__img"
+        src={
+          isFavorite
+            ? '/public/img/heart-fill-icon.svg'
+            : '/public/img/heart-icon.svg'
+        }
+        alt="하트"
+      />
     </button>
-  )
+  );
 }
 
 function LinkIconBtn({ link }) {
@@ -13,11 +20,18 @@ function LinkIconBtn({ link }) {
     <a className="btn" href={link} target="_blank" rel="noreferrer">
       <img className="btn__img" src="/public/img/link-icon.svg" alt="링크" />
     </a>
-  )
+  );
 }
 
-export default function CourseItem({ onFavorite, id, title, description, thumbnail, isFavorite, link }) {
-  
+export default function CourseItem({
+  onFavorite,
+  id,
+  title,
+  description,
+  thumbnail,
+  isFavorite,
+  link,
+}) {
   // const isEmpty = false;
 
   // if(isEmpty) {

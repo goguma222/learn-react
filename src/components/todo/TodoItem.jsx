@@ -1,15 +1,14 @@
-import { useTodosDespatch } from "../../context/TodoContext";
-import { useEffect } from "react";
+import { useTodosDespatch } from '../../context/TodoContext';
+import { useEffect } from 'react';
 
 export default function TodoItem({ item }) {
-
   const dispatch = useTodosDespatch();
 
   // 할일 목록 삭제 함수
-  const handleDeleteTodo = (deleteId) => {
+  const handleDeleteTodo = deleteId => {
     // 리듀서 적용
     dispatch({
-      type: "deleted",
+      type: 'deleted',
       deleteId,
     });
   };
@@ -18,7 +17,7 @@ export default function TodoItem({ item }) {
   const handleToggleTodo = (id, done) => {
     // 리듀서 적용
     dispatch({
-      type: "done",
+      type: 'done',
       id,
       done,
     });
@@ -31,7 +30,7 @@ export default function TodoItem({ item }) {
         id={item.id}
         type="checkbox"
         checked={item.done}
-        onChange={(e) => handleToggleTodo(item.id, e.target.checked)}
+        onChange={e => handleToggleTodo(item.id, e.target.checked)}
       />
       <label htmlFor={item.id}>
         {item.done ? <del>{item.text}</del> : item.text}

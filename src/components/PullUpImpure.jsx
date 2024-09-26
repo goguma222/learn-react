@@ -1,11 +1,8 @@
 let counter = 10;
 
 export default function PullPuImpure() {
+  counter += 1;
+  console.log(`counter : ${counter}`);
 
-    counter += 1;
-    console.log(`counter : ${counter}`);
-
-    return (
-        <p>나는 턱걸이를 {counter}개 했습니다.</p>
-    )
+  return <p>나는 턱걸이를 {counter}개 했습니다.</p>;
 }

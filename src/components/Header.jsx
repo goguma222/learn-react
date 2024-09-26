@@ -1,7 +1,3 @@
 export default function Header(props) {
-    return (
-        <header>
-            header
-        </header>
-    );
+  return <header>header</header>;
 }
